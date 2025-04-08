@@ -1,9 +1,10 @@
 * {
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
 div {
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .container {
@@ -11,18 +12,25 @@ div {
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 5fr;
     height: 100vh;
+    width: 100%;
+}
+
+.header {
+    grid-area: 1 / 2 / 2 / -1;
+    height: calc(1080px / 6);
+    padding: 1rem;
 }
 
 .sidebar {
     grid-area: 1 / 1 / -1 / 2;
     background-color: #1992D4;
+    padding: 1rem;
 }
 
 .sidebar-content {
     display: grid;
     grid-template-rows: 1fr 3fr 3fr;
     gap: 2rem;
-
     height: 60%;
 }
 
@@ -37,6 +45,7 @@ div {
     text-align: center;
     font-size: 1.25rem;
     display: flex;
+    font-weight: bold;
 }
 
 .utility-links {
@@ -47,6 +56,8 @@ div {
 
 .main {
     background-color: #E2E8F0;
+    grid-area: 2 / 2 / -1 / -1;
+    padding: 1rem;
 }
 
 .main-content{ 
@@ -54,18 +65,38 @@ div {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: repeat(2, 1fr);
     height: 100%;
+    gap: 1rem;
+
 }
 
 .projects {
     grid-row: 1 / span 2;
     grid-column: 1 / span 1;
+
 }
 
 .proj-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    height: 93%;
+    gap: 2rem;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 3fr repeat(3, 1fr);
+    grid-template-rows: 3fr 1fr;
+    background-color: white;
+    border-left: 7px solid #F0B429;
+    border-radius: 7px;
+    padding: 0.75rem;
+}
+
+.proj-description {
+    grid-column: 1 / span 4;
+}
+.announcements{
+    height: 50%;
 }
 
 .announce-grid {
@@ -73,16 +104,22 @@ div {
     grid-template-rows: repeat(3, 1fr);
     gap: 1rem;
     height: 75%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 7px;
 }
+
+.trending {
+    height: 50%;
+}
+
 
 .trend-grid {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     gap: 1rem;
     height: 75%;
+    background-color: white;
+    border-radius: 7px;
+    padding: 1rem;
 }
-
-
-
-
-
